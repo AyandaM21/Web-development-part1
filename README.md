@@ -41,3 +41,16 @@ This website is for Gogas Stationery. It is a small shop that sells books, stati
 - Gogas Stationery. (2024).https://www.facebook.com/p/Gogas-Stationers-100054411282908/
 - Mozilla Developer Network (MDN). (2024). *HTML: HyperText Markup Language*. Available at: https://developer.mozilla.org/en-US/docs/Web/HTML.
 - W3Schools. (2024). *HTML Tutorial*. Available at: https://www.w3schools.com/.
+
+
+##Part 3 Updates
+
+### Changelog Version 3.0
+*Fixes based on Part 2 Feedback:
+-Fixed broken image liks
+- Added proper descriptive alt text to all images for accessibility and SEO
+- Added tittle tags on all pages
+
+  ## New Part 3 Features
+  - Creating interactive HTML forms
+  - Implementing JavaScript form validation
