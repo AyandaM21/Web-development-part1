@@ -3,50 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact - Gogas Stationery</title>
-    <link rel="stylesheet" href="style.css">
     
+    <!-- SEO Title and Description -->
+    <title>Contact Us | Gogas Stationery Ladysmith</title>
+    <meta name="description" content="Get in touch with Gogas Stationery. Find our address, phone number, business hours, or send us a general message online.">
+    
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Header with logo and navigation -->
-    <header>
-        <h1>Gogas Stationery</h1>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="enquiry.html">Enquiry</a>
-            <a href="services.html">Services</a>
-            <a href="contact.html">Contact</a>
-        </nav>
-    </header>
+<header>
+    <h1>Gogas Stationery</h1>
+    <nav> 
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="enquiry.html">Enquiry</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+        <a href="#" id="cart-link" onclick="openCart()">🛒 Cart (<span id="cart-count">0</span>)</a>
+    </nav>
+    <hr>
+</header>
 
-    <!-- Main content contact details --> 
-    <main>
+<main>
+    <div class="home-intro">
         <h2>Contact Us</h2>
-        <p>If you have any questions or need assistance, feel free to reach out to us using the information below:</p>
+        <p>If you have any questions or need assistance, feel free to reach out to us using the information below or send us a message.</p>
+    </div>
 
-        <h3>Address</h3>
-        <p>94 Murchison Street, Ladysmith, 3370</p>
+    <!-- Contact Details -->
+    <div class="features-container">
+        <div class="feature-card">
+            <h4>📍 Our Location</h4>
+            <p>94 Murchison Street,<br>Ladysmith, 3370</p>
+        </div>
+        
+        <div class="feature-card">
+            <h4>📞 Phone</h4>
+            <p>+27 36 637 3176</p>
+        </div>
+        
+        <div class="feature-card">
+            <h4>🕒 Business Hours</h4>
+            <p>Mon - Fri: 08:00 AM - 17:00 PM</p>
+            <p>Sat: 08:00 AM - 13:00 PM</p>
+            <p>Sun: Closed</p>
+        </div>
+    </div>
 
-        <h3>Phone</h3>
-        <p>+27 36 637 3176</p>
+    <div class="home-intro">
+        <h3>Send Us a General Message</h3>
+    </div>
 
-        <h3>Email</h3>
-        <p>Compusup@mweb.co.za</p>
+    <!-- The Contact Form -->
+    <form id="contactForm" novalidate> 
+        <label for="contactName">Full Name:</label>
+        <input type="text" id="contactName" name="contactName" placeholder="Enter your name" required>
+        
+        <label for="contactEmail">Email Address:</label>
+        <input type="email" id="contactEmail" name="contactEmail" placeholder="Enter your email" required>
+        
+        <label for="messageType">Type of Message:</label>
+        <select id="messageType" name="messageType">
+            <option value="general">General Question</option>
+            <option value="feedback">Feedback / Complaint</option>
+            <option value="partnership">Partnership Opportunity</option>
+        </select>
 
-        <h3>Business Hours</h3>
-        <p>Monday - Friday: 08:00 AM - 17:00 PM<br>
-            <p>Saturday: 08:00 AM - 13:00 PM</p>
-        </p>Sunday: Closed</p>
-    </main>
+        <label for="contactMessage">Message:</label>
+        <textarea id="contactMessage" name="contactMessage" rows="4" placeholder="Type your message here..." required></textarea>
 
+        <!-- JavaScript error or success message -->
+        <p id="contact-error" style="color: red; font-weight: bold;"></p>
 
+        <button type="submit" class="learn-btn">Send Message</button>
+    </form>
+</main>
 
+<footer>
+    <p>2026 Gogas Stationery. All rights reserved.</p>
+</footer>
 
-    
-    <footer>
-        <p>2026 Gogas Stationery. All rights reserved.</p>
-    </footer>
+<script src="script.js"></script>
 </body>
 </html>

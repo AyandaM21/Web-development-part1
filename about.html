@@ -3,43 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Gogas Stationery</title>
-    <link rel="stylesheet" href="style.css">
     
+    <!-- SEO Title and Description -->
+    <title>About Us | Gogas Stationery Ladysmith</title>
+    <meta name="description" content="Learn about the history and vision of Gogas Stationery. We are a trusted family business in Ladysmith providing quality books and office supplies.">
+    
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header>
-    <!-- Header with logo and navigation -->
     <h1>About Gogas Stationery</h1>
-    <nav> 
+    <nav>
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
         <a href="enquiry.html">Enquiry</a>
         <a href="services.html">Services</a>
         <a href="contact.html">Contact</a>
-
+        <a href="#" id="cart-link" onclick="openCart()">🛒 Cart (<span id="cart-count">0</span>)</a>
     </nav>
+    <hr>
 </header>
 
-<!-- Main content about the shop-->
 <main>
-    <h2>About Gogas Stationery</h2>
+    <!-- Split Layout: Image on left, text on right -->
+    <div class="about-split">
+        <div class="about-image-container">
+            <img src="Images/books.jpg" alt="Stack of textbooks at Gogas Stationery" class="about-img">
+        </div>
+        
+        <div class="about-text-container">
+            <h2>About Gogas Stationery</h2>
+            <p>Gogas Stationery started as a small family business in Ladysmith.</p>
+            <p>We have grown over the years to become a trusted shop in town.</p>
+            <p>We are committed to providing students, teachers, and local businesses with the best educational materials and office supplies.</p>
+        </div>
+    </div>
 
-    <p>Gogas Stationery started as a small family business in Ladysmith.</p>
-     <p>We have grown over the years to become a trusted shop in town</p>
+    <!-- The Cards below -->
+    <div class="features-container" style="margin-top: 50px;">
+        <div class="feature-card">
+            <h3>Our Vision</h3>
+            <p>We aim to be the most trusted stationery shop in town, known for our excellent service and wide range of educational materials.</p>
+        </div>
 
-     <h3>Our Vision</h3>
-     <p>We aim to be the most trusted stationery shop in town</p>
-
-     <h3>What we believe in</h3>
-     <ul>
-        <li>Quality products at an affordable price</li>
-        <li>Supporting local students and teachers</li>
-        <li>Good customer service</li>
-     </ul>
-     <hr>
-
+        <div class="feature-card">
+            <h3>What We Believe In</h3>
+            <ul class="card-list">
+                <li>Quality products at an affordable price</li>
+                <li>Supporting local students and teachers</li>
+                <li>Good customer service</li>
+            </ul>
+        </div>
+    </div>
 </main>
 
 <footer>

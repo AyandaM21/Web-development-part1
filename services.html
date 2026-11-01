@@ -3,56 +3,145 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services - Gogas Stationery</title>
-    <link rel="stylesheet" href="style.css">
     
+    <!-- SEO Title and Description -->
+    <title>Shop and Prices - Gogas Stationery Ladysmith</title>
+    <meta name="description" content="View our price list for textbooks, calculators, Grade R supplies, lamination and office stationery in Ladysmith.">
+    
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-     <!-- Header with logo and navigation -->
-    <header>
-        <h1>Gogas Stationery</h1>
-        <nav>
+<header>
+    <h1>Gogas Stationery</h1>
+    <nav>
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
         <a href="enquiry.html">Enquiry</a>
         <a href="services.html">Services</a>
         <a href="contact.html">Contact</a>
-        </nav>
-        <hr>
+         <a href="#" id="cart-link" onclick="openCart()">🛒 Cart (<span id="cart-count">0</span>)</a>
+    </nav>
+    <hr>
+</header>
 
-    </header>
+<main>
+    <div class="shop-header">
+        <div class="shop-title">
+            <h2>Our Product Catalogue</h2>
+            <p>Browse our wide range of school and office supplies.</p>
+        </div>
+        
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Search for products..." onkeyup="filterProducts()">
+        </div>
+    </div>
 
-     <!-- Main content services offered -->
-    <main>
-        <h2>Our Services</h2>
-        <p>We offer lot of servives to make your life easier.</p>
+    <div class="features-container" id="productGrid">
+        <div class="feature-card">
+            <img src="Images/olga-kononenko-EoDTSwAsQDc-unsplash.jpg" alt="Languange textbooks" class="card-img">
+            <h4>📚 Languange Textbooks</h4>
+            <ul class="English Textbooks">
+                <li>English Textbooks - <span>R350 <button class="small-add-btn" onclick="addToCart('English Textbooks', 350)">+ Add </button></li>
+                <li>IsiZulu Textbooks - <span>R450 <button class="small-add-btn" onclick="addToCart('IsiZulu Textbooks', 450)">+ Add </button></li>
+                <li>Afrikaans Textbooks - <span>R300 <button class="small-add-btn" onclick="addToCart('Afrikaans Textbooks', 300)">+ Add </button></li>
+                
+            </ul>
+        </div>
 
-        <h3>Stationery Sales</h3>
-        <p>We sell a wide range of stationery including</p>
-        <ul>
+        <!-- Maths and Science Textbooks-->
+        <div class="feature-card">
+            <img src="Images/books.jpg" alt="Maths and Science books" class="card-img">
+            <h4>✏️ Maths and Sciences</h4>
+            <ul class="card-list">
+                <li>Mathematics Grade 4-12  <span>R500 <button class="small-add-btn" onclick="addToCart('Mathematics Textbooks', 500)">+ Add </button></li>
+                <li>Science Textbooks Grade 10-12  <span>R550 <button class="small-add-btn" onclick="addToCart('Science Textbooks', 550)">+ Add </button></li>
+                <li>Social Sciences Grade 5-9  <span>R350 <button class="small-add-btn" onclick="addToCart('Social Sciences Textbooks', 350)">+ Add </button></li>
+                <li>History Grade 10-12 - <span>R450 <button class="small-add-btn" onclick="addToCart('History Textbooks', 450)">+ Add </button></li>
+                <li>Geography Grade 10-12 - <span>R450 <button class="small-add-btn" onclick="addToCart('Geography Textbooks', 450)">+ Add </button></li>
+            </ul>
+        </div>
 
-                <li>Pens, Pencils and erasers</li>
-                <li>Notebooks and printing paper</li>
-                <li>Files and folders</li>
-        </ul>
-        <hr>
+        <!-- Calculators --> 
+        <div class="feature-card">
+            <img src="Images/calculators.jpg" alt="Calculators" class="card-img">
+            <h4>🧮 Calculators</h4>
+            <ul class="price-list">
+                <li>Casio Scientific Calculator - <span>R400.00 <button class="small-add-btn" onclick="addToCart('Casio Calculator', 400)">+</button></li>
+                <li>Basic Calculators - <span>R200.00 <button class="small-add-btn" onclick="addToCart('Basic Calculator', 200)">+</button></li>
+                
+            </ul>
+        </div>
 
-        <li>Photocopy</li>
-        <li>Printing</li>
-        <li>Typing services available</li>
-        <ul>
-         <hr>  
-    
 
-        <h3>Textbooks</h3>
-        <p>We sell texbooks for all subjects for highschool.</p>
+        <div class="feature-card">
+            <img src="Images/Pens.jpg" alt="Pens and other stationery" class="card-img">
+            <h4>🖊️ Stationery Supplies</h4>
+            <ul class="price-list">
+                <li>Pens (Box of 12) - <span>R60.00 <button class="small-add-btn" onclick="addToCart('Pens', 60)">+</button></li>
+                <li>Single Pen (Blue/Black) - <span>R10.00 <button class="small-add-btn" onclick="addToCart('Single Pen (Blue/Black)', 10)">+</button></li>
+                <li>Single Pen (Red) - <span>R12.00 <button class="small-add-btn" onclick="addToCart('Single Pen (Red)', 12)">+</button></li>
+                <li>Pencils (Box of 12) - <span>R50.00 <button class="small-add-btn" onclick="addToCart('Pencils', 50)">+</button></li>
+                <li>Highlighters  - <span>R50.00 <button class="small-add-btn" onclick="addToCart('Highlighters', 50)">+</button></li>
+                <li>Crayons - <span>R60.00 <button class="small-add-btn" onclick="addToCart('Crayons', 60)">+</button></li>
+                <li>Glue sticks <span>R25.00 <button class="small-add-btn" onclick="addToCart('Glue sticks', 25)">+</button></li>
+                <li>Scissors - <span>R30.00 <button class="small-add-btn" onclick="addToCart('Scissors', 30)">+</button></li>
+                <li>Rulers - <span>R15.00 <button class="small-add-btn" onclick="addToCart('Rulers', 15)">+</button></li>
+            </ul>
+        </div>
 
-         
-    </main>
-    
-    <footer>
-        <p>2026 Gogas Stationery. All rights reserved.</p>
-    </footer>
+        <!-- Papers and marking books-->
+         <div class="feature-card">
+            <img src="Images/files.jpg" alt="Files and marking books" class="card-img">
+            <h4>📄 Papers and Marking Books</h4>
+            <ul class="price-list">
+                <li>Exam pads - <span>R20.00 <button class="small-add-btn" onclick="addToCart('Exam pads', 20)">+ Add </button></li>
+                <li>Marking Books - <span>R30.00 <button class="small-add-btn" onclick="addToCart('Marking Books', 30)">+ Add </button></li>
+                <li>Notebooks - <span>R40.00 <button class="small-add-btn" onclick="addToCart('Notebooks', 40)">+ Add </button></li>
+                <li>Exercises 2 quire - <span>R30.00 <button class="small-add-btn" onclick="addToCart('Exercises 2 quire', 30)">+ Add </button></li>
+                <li>A4 Hardcover Books - <span>R40.00 <button class="small-add-btn" onclick="addToCart('A4 Hardcover Books', 40)">+ Add </button></li>
+            </ul>
+        </div>
+
+        <!-- Printing Services -->
+         <div class="feature-card">
+            <img src="Images/printing.jpg" alt="Printing" class="card-img">
+            <h4>🖨️ Printing & Photocopying</h4>
+            <ul class="price-list">
+                <li>Black & White Photocopying and Printing- <span>R1.50 per page</span></li>
+                <li>Colour Photocopying and Printing - <span>R5.00 per page </span></li>
+            </ul>
+        </div>
+
+        <!-- Specialized Services -->
+        <div class="feature-card">
+            <img src="Images/printing.jpg" alt="Lamination and Certificates" class="card-img">
+            <h4> Special Services</h4>
+            <ul class="price-list">
+                <li>Lamination - <span>R20.00 per page</span></li>
+                <li>Books or Certifications Covering - <span>R10.00 each</span></li>
+                <li>Wedding Cards or Invitations - <span>R50.00 each</span></li>
+            </ul>
+            <h4>⌨️ Typing Services</h4>
+            <p>Need a document typed up? Our fast and reliable typing services are available to help you instore only.</p>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <p>2026 Gogas Stationery. All rights reserved.</p>
+</footer>
+
+<!-- The Cart Popup Modal -->
+<div id="cartModal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" onclick="closeCart()">&times;</span>
+        <h2>🛒 Your Order</h2>
+        <ul id="cart-items-list"></ul>
+        <h3 id="cart-total-price">Total: R0.00</h3>
+        <button class="learn-btn" onclick="closeCart()">Continue Shopping</button>
+    </div>
+</div>
+<script src="script.js"></script>
 </body>
 </html>

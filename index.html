@@ -3,48 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gogas Stationery</title>
+    
+    <!-- SEO Title and Description -->
+    <title>Home | Gogas Stationery Ladysmith</title>
+    <meta name="description" content="Gogas Stationery is your trusted local shop in Ladysmith for school textbooks, study guides, office supplies, and printing services.">
+    
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Header with logo and navigation -->
-    <header>
-        <h1> Gogas Stationery</h1>
-    
+<header>
+    <h1>Gogas Stationery</h1>
     <nav>
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
         <a href="enquiry.html">Enquiry</a>
         <a href="services.html">Services</a>
         <a href="contact.html">Contact</a>
+        <a href="#" id="cart-link" onclick="openCart()">🛒 Cart (<span id="cart-count">0</span>)</a>
     </nav>
     <hr>
-    </header>
-     Images/back to school.jpg
+</header>
 
+<main>
+    <!-- The Hero Section -->
+    <div class="hero-section">
+        <div class="hero-text">
+            <h2>Welcome to Gogas Stationery</h2>
+            <p>Your trusted shop for books and stationery in Ladysmith.</p>
+            <p>We provide a wide range of stationery, textbooks and office supplies.</p>
+        </div>
+    </div>
 
-    <!-- Main content welcome message and shop information -->
-    <main>
-        <h2>Welcome to Gogas Stationery</h2>
-        <img src="Images/back to school.jpg"="Gogas Stationery Shop" width="500">
-        <p>Your trusted shop for books and stationery in Ladysmith</p>
-        <p>We provide a wide range of stationery, textbooks and office supplies.</p>
+    <h3 class="why-title">Why choose us?</h3>
+   
+    <div class="features-container">
+        <div class="feature-card">
+            <h4>Quality Products</h4>
+            <p>We provide Quality Products at affordable prices</p>
+        </div>  
+     
+        <div class="feature-card">
+            <h4>Wide Selection</h4>
+            <p>We provide a wide selection of books and stationery</p>
+        </div>
 
-        <h3>Why choose us</h3>
-        <ul>
-            <li>Quality products at affordable prices</li>
-            <li>Wide selection of books and stationery</li>
-            <li>Printing, photocopying and typing services</li>
-        </ul>
-        <hr>
-    </main>
+        <div class="feature-card">
+            <h4>Customer Service</h4>
+            <p>We provide excellent customer service in Printing, photocopying and typing services</p>
+        </div>
+    </div>
+</main>
 
+<footer>
+    <p>2026 Gogas Stationery. All rights reserved.</p>
+</footer>
 
-
-
-    <footer>
-        <p>2026 Gogas Stationery. All rights reserved.</p>
-    </footer>
 </body>
 </html>
