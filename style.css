@@ -177,10 +177,10 @@ form {
     flex-direction: column;
     max-width: 600px;
     margin: 40px auto;
-    background-color: #FFFFFF; /* Pure white form card */
+    background-color: #FFFFFF; 
     padding: 40px;
-    border-radius: 20px; /* Very rounded corners */
-    box-shadow: 0 10px 30px rgba(0,0,0,0.08); /* Soft, modern shadow */
+    border-radius: 20px; 
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08); 
 }
 
 label {
@@ -195,8 +195,8 @@ label {
 input, select, textarea {
     width: 100%;
     padding: 15px;
-    border: none; /* No border */
-    background-color: #F4F6F8; /* Soft grey background */
+    border: none; 
+    background-color: #F4F6F8; 
     border-radius: 10px;
     font-family: 'Arial', sans-serif;
     font-size: 1rem;
@@ -208,7 +208,7 @@ input, select, textarea {
 input:focus, select:focus, textarea:focus {
     outline: none;
     background-color: #FFFFFF;
-    box-shadow: 0 0 0 3px rgba(255, 102, 0, 0.2); /* Orange glow */
+    box-shadow: 0 0 0 3px rgba(255, 102, 0, 0.2); 
 }
 
 form .learn-btn {
@@ -231,8 +231,8 @@ form .learn-btn:hover {
 /* Styling for images inside the feature cards */
 .card-img {
     width: 100%;
-    height: 150px; /* Keeps all images the same height */
-    object-fit: cover; /* Stops the image from stretching weirdly */
+    height: 150px; 
+    object-fit: cover; 
     border-radius: 10px;
     margin-bottom: 15px;
     transition: transform 0.3s ease;
@@ -452,6 +452,81 @@ form .learn-btn:hover {
 }
 
 #searchInput:focus {
-    border-color: #FF6600; /* Orange border when clicked */
+    border-color: #FF6600; /* Orange when clicked */
     box-shadow: 0 4px 15px rgba(255, 102, 0, 0.2);
+}
+
+/* Image Gallery Styling */
+.gallery-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin: 20px 0 50px 0;
+}
+
+.gallery-img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.gallery-img:hover {
+    transform: scale(1.1); /*  It pops when hovering */
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+/* The Full Screen Lightbox */
+.lightbox {
+    display: none; 
+    position: fixed;
+    z-index: 2000;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background-color: rgba(0,0,0,0.85);
+    text-align: center;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 85%;
+    margin-top: 5%;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(255,255,255,0.2);
+}
+
+.close-lightbox {
+    position: absolute;
+    top: 20px; right: 40px;
+    color: white;
+    font-size: 50px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.close-lightbox:hover {
+    color: #FF6600; /* Orange on hover */
+}
+
+/* Delivery Options Styling */
+.delivery-options {
+    background-color: #f4f6f8;
+    padding: 15px;
+    border-radius: 10px;
+    margin: 15px 0;
+    font-size: 0.95rem;
+}
+.delivery-options label {
+    display: block;
+    margin-bottom: 8px;
+    cursor: pointer;
+    color: #333;
+}
+.delivery-options input {
+    margin-right: 8px;
+    cursor: pointer;
 }

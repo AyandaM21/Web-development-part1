@@ -20,7 +20,7 @@
         <a href="enquiry.html">Enquiry</a>
         <a href="services.html">Services</a>
         <a href="contact.html">Contact</a>
-         <a href="#" id="cart-link" onclick="openCart()">🛒 Cart (<span id="cart-count">0</span>)</a>
+        <a href="#" id="cart-link" onclick="openCart()">🛒 Cart (<span id="cart-count">0</span>)</a>
     </nav>
     <hr>
 </header>
@@ -38,92 +38,91 @@
     </div>
 
     <div class="features-container" id="productGrid">
-        <div class="feature-card">
-            <img src="Images/olga-kononenko-EoDTSwAsQDc-unsplash.jpg" alt="Languange textbooks" class="card-img">
-            <h4>📚 Languange Textbooks</h4>
-            <ul class="English Textbooks">
-                <li>English Textbooks - <span>R350 <button class="small-add-btn" onclick="addToCart('English Textbooks', 350)">+ Add </button></li>
-                <li>IsiZulu Textbooks - <span>R450 <button class="small-add-btn" onclick="addToCart('IsiZulu Textbooks', 450)">+ Add </button></li>
-                <li>Afrikaans Textbooks - <span>R300 <button class="small-add-btn" onclick="addToCart('Afrikaans Textbooks', 300)">+ Add </button></li>
-                
+        <!-- Language Textbooks -->
+        <div class="feature-card product-card" data-name="language textbooks english isizulu afrikaans">
+            <img src="Images/olga-kononenko-EoDTSwAsQDc-unsplash.jpg" alt="Language textbooks" class="card-img">
+            <h4>📚 Language Textbooks</h4>
+            <ul class="price-list">
+                <li>English Textbooks - <span>R350.00</span> <button class="small-add-btn" onclick="addToCart('English Textbook', 350)">+ Add</button></li>
+                <li>IsiZulu Textbooks - <span>R450.00</span> <button class="small-add-btn" onclick="addToCart('IsiZulu Textbook', 450)">+ Add</button></li>
+                <li>Afrikaans Textbooks - <span>R300.00</span> <button class="small-add-btn" onclick="addToCart('Afrikaans Textbook', 300)">+ Add</button></li>
             </ul>
         </div>
 
-        <!-- Maths and Science Textbooks-->
-        <div class="feature-card">
+        <!-- Maths and Sciences -->
+        <div class="feature-card product-card" data-name="maths science mathematics social history geography">
             <img src="Images/books.jpg" alt="Maths and Science books" class="card-img">
             <h4>✏️ Maths and Sciences</h4>
-            <ul class="card-list">
-                <li>Mathematics Grade 4-12  <span>R500 <button class="small-add-btn" onclick="addToCart('Mathematics Textbooks', 500)">+ Add </button></li>
-                <li>Science Textbooks Grade 10-12  <span>R550 <button class="small-add-btn" onclick="addToCart('Science Textbooks', 550)">+ Add </button></li>
-                <li>Social Sciences Grade 5-9  <span>R350 <button class="small-add-btn" onclick="addToCart('Social Sciences Textbooks', 350)">+ Add </button></li>
-                <li>History Grade 10-12 - <span>R450 <button class="small-add-btn" onclick="addToCart('History Textbooks', 450)">+ Add </button></li>
-                <li>Geography Grade 10-12 - <span>R450 <button class="small-add-btn" onclick="addToCart('Geography Textbooks', 450)">+ Add </button></li>
+            <ul class="price-list">
+                <li>Mathematics Grade 4-12 - <span>R500.00</span> <button class="small-add-btn" onclick="addToCart('Maths Textbook', 500)">+ Add</button></li>
+                <li>Science Textbooks - <span>R550.00</span> <button class="small-add-btn" onclick="addToCart('Science Textbook', 550)">+ Add</button></li>
+                <li>Social Sciences - <span>R350.00</span> <button class="small-add-btn" onclick="addToCart('Social Sciences Textbook', 350)">+ Add</button></li>
+                <li>History Textbooks - <span>R450.00</span> <button class="small-add-btn" onclick="addToCart('History Textbook', 450)">+ Add</button></li>
+                <li>Geography Textbooks - <span>R450.00</span> <button class="small-add-btn" onclick="addToCart('Geography Textbook', 450)">+ Add</button></li>
             </ul>
         </div>
 
         <!-- Calculators --> 
-        <div class="feature-card">
+        <div class="feature-card product-card" data-name="calculators casio scientific basic">
             <img src="Images/calculators.jpg" alt="Calculators" class="card-img">
             <h4>🧮 Calculators</h4>
             <ul class="price-list">
-                <li>Casio Scientific Calculator - <span>R400.00 <button class="small-add-btn" onclick="addToCart('Casio Calculator', 400)">+</button></li>
-                <li>Basic Calculators - <span>R200.00 <button class="small-add-btn" onclick="addToCart('Basic Calculator', 200)">+</button></li>
-                
+                <li>Casio Scientific - <span>R400.00</span> <button class="small-add-btn" onclick="addToCart('Casio Calculator', 400)">+ Add</button></li>
+                <li>Basic Calculators - <span>R200.00</span> <button class="small-add-btn" onclick="addToCart('Basic Calculator', 200)">+ Add</button></li>
             </ul>
         </div>
 
-
-        <div class="feature-card">
-            <img src="Images/Pens.jpg" alt="Pens and other stationery" class="card-img">
+        <!-- Stationery Supplies -->
+        <div class="feature-card product-card" data-name="pens pencils highlighters crayons glue scissors rulers">
+            <img src="Images/Pens.jpg" alt="Stationery Supplies" class="card-img">
             <h4>🖊️ Stationery Supplies</h4>
             <ul class="price-list">
-                <li>Pens (Box of 12) - <span>R60.00 <button class="small-add-btn" onclick="addToCart('Pens', 60)">+</button></li>
-                <li>Single Pen (Blue/Black) - <span>R10.00 <button class="small-add-btn" onclick="addToCart('Single Pen (Blue/Black)', 10)">+</button></li>
-                <li>Single Pen (Red) - <span>R12.00 <button class="small-add-btn" onclick="addToCart('Single Pen (Red)', 12)">+</button></li>
-                <li>Pencils (Box of 12) - <span>R50.00 <button class="small-add-btn" onclick="addToCart('Pencils', 50)">+</button></li>
-                <li>Highlighters  - <span>R50.00 <button class="small-add-btn" onclick="addToCart('Highlighters', 50)">+</button></li>
-                <li>Crayons - <span>R60.00 <button class="small-add-btn" onclick="addToCart('Crayons', 60)">+</button></li>
-                <li>Glue sticks <span>R25.00 <button class="small-add-btn" onclick="addToCart('Glue sticks', 25)">+</button></li>
-                <li>Scissors - <span>R30.00 <button class="small-add-btn" onclick="addToCart('Scissors', 30)">+</button></li>
-                <li>Rulers - <span>R15.00 <button class="small-add-btn" onclick="addToCart('Rulers', 15)">+</button></li>
+                <li>Pens (Box of 12) - <span>R60.00</span> <button class="small-add-btn" onclick="addToCart('Pens Box', 60)">+ Add</button></li>
+                <li>Single Pen (Blue/Black) - <span>R10.00</span> <button class="small-add-btn" onclick="addToCart('Single Pen (Blue/Black)', 10)">+ Add</button></li>
+                <li>Single Pen (Red) - <span>R12.00</span> <button class="small-add-btn" onclick="addToCart('Single Pen (Red)', 12)">+ Add</button></li>
+                <li>Pencils (Box of 12) - <span>R50.00</span> <button class="small-add-btn" onclick="addToCart('Pencils Box', 50)">+ Add</button></li>
+                <li>Highlighters - <span>R50.00</span> <button class="small-add-btn" onclick="addToCart('Highlighters', 50)">+ Add</button></li>
+                <li>Crayons - <span>R60.00</span> <button class="small-add-btn" onclick="addToCart('Crayons', 60)">+ Add</button></li>
+                <li>Glue sticks - <span>R25.00</span> <button class="small-add-btn" onclick="addToCart('Glue sticks', 25)">+ Add</button></li>
+                <li>Scissors - <span>R30.00</span> <button class="small-add-btn" onclick="addToCart('Scissors', 30)">+ Add</button></li>
+                <li>Rulers - <span>R15.00</span> <button class="small-add-btn" onclick="addToCart('Ruler', 15)">+ Add</button></li>
             </ul>
         </div>
 
-        <!-- Papers and marking books-->
-         <div class="feature-card">
+        <!-- Papers and Marking Books -->
+         <div class="feature-card product-card" data-name="exam pads marking books notebooks exercises hardcover">
             <img src="Images/files.jpg" alt="Files and marking books" class="card-img">
             <h4>📄 Papers and Marking Books</h4>
             <ul class="price-list">
-                <li>Exam pads - <span>R20.00 <button class="small-add-btn" onclick="addToCart('Exam pads', 20)">+ Add </button></li>
-                <li>Marking Books - <span>R30.00 <button class="small-add-btn" onclick="addToCart('Marking Books', 30)">+ Add </button></li>
-                <li>Notebooks - <span>R40.00 <button class="small-add-btn" onclick="addToCart('Notebooks', 40)">+ Add </button></li>
-                <li>Exercises 2 quire - <span>R30.00 <button class="small-add-btn" onclick="addToCart('Exercises 2 quire', 30)">+ Add </button></li>
-                <li>A4 Hardcover Books - <span>R40.00 <button class="small-add-btn" onclick="addToCart('A4 Hardcover Books', 40)">+ Add </button></li>
+                <li>Exam pads - <span>R20.00</span> <button class="small-add-btn" onclick="addToCart('Exam Pads', 20)">+ Add</button></li>
+                <li>Marking Books - <span>R30.00</span> <button class="small-add-btn" onclick="addToCart('Marking Books', 30)">+ Add</button></li>
+                <li>Notebooks - <span>R40.00</span> <button class="small-add-btn" onclick="addToCart('Notebooks', 40)">+ Add</button></li>
+                <li>Exercises 2 quire - <span>R30.00</span> <button class="small-add-btn" onclick="addToCart('Exercises 2 quire', 30)">+ Add</button></li>
+                <li>A4 Hardcover Books - <span>R40.00</span> <button class="small-add-btn" onclick="addToCart('A4 Hardcover Books', 40)">+ Add</button></li>
             </ul>
         </div>
 
         <!-- Printing Services -->
-         <div class="feature-card">
+         <div class="feature-card product-card" data-name="printing photocopying black white colour">
             <img src="Images/printing.jpg" alt="Printing" class="card-img">
             <h4>🖨️ Printing & Photocopying</h4>
             <ul class="price-list">
-                <li>Black & White Photocopying and Printing- <span>R1.50 per page</span></li>
-                <li>Colour Photocopying and Printing - <span>R5.00 per page </span></li>
+                <li>Black & White Print (per page) - <span>R1.50</span> <button class="small-add-btn" onclick="addToCart('B&W Print (10 pgs)', 15)">+ Add (10pgs)</button></li>
+                <li>Colour Print (per page) - <span>R5.00</span> <button class="small-add-btn" onclick="addToCart('Colour Print (10 pgs)', 50)">+ Add (10pgs)</button></li>
             </ul>
         </div>
 
         <!-- Specialized Services -->
-        <div class="feature-card">
+        <div class="feature-card product-card" data-name="lamination certificates wedding cards typing">
             <img src="Images/printing.jpg" alt="Lamination and Certificates" class="card-img">
-            <h4> Special Services</h4>
+            <h4>✨ Special Services</h4>
             <ul class="price-list">
-                <li>Lamination - <span>R20.00 per page</span></li>
-                <li>Books or Certifications Covering - <span>R10.00 each</span></li>
-                <li>Wedding Cards or Invitations - <span>R50.00 each</span></li>
+                <li>Lamination - <span>R20.00</span> <button class="small-add-btn" onclick="addToCart('Lamination', 20)">+ Add</button></li>
+                <li>Certification Covering - <span>R10.00</span> <button class="small-add-btn" onclick="addToCart('Certificate Covering', 10)">+ Add</button></li>
+                <li>Wedding Cards - <span>R50.00</span> <button class="small-add-btn" onclick="addToCart('Wedding Cards', 50)">+ Add</button></li>
             </ul>
             <h4>⌨️ Typing Services</h4>
-            <p>Need a document typed up? Our fast and reliable typing services are available to help you instore only.</p>
+            <p style="font-size: 0.9rem; margin-top: 10px;">Need a document typed up? Our fast and reliable typing services are available to help you instore only.</p>
         </div>
     </div>
 </main>
@@ -138,10 +137,43 @@
         <span class="close-btn" onclick="closeCart()">&times;</span>
         <h2>🛒 Your Order</h2>
         <ul id="cart-items-list"></ul>
+
+        <!-- Delivery or Collection Options -->
+        <div class="delivery-options">
+            <p style="margin-bottom: 10px; font-weight: bold;">How would you like to receive your order?</p>
+            <label>
+                <input type="radio" name="deliveryMethod" value="collect" checked onclick="updateDeliveryText()"> 
+                Collect in Store (Free)
+            </label>
+            <label>
+                <input type="radio" name="deliveryMethod" value="deliver" onclick="updateDeliveryText()"> 
+                Deliver to my address
+            </label>
+
+            <!-- Hidden Address & Area Box -->
+            <div id="address-container" style="display: none; margin-top: 15px;">
+                <label for="deliveryAddress" style="font-weight: bold; margin-bottom: 5px; display: block;">Enter Delivery Address:</label>
+                <textarea id="deliveryAddress" rows="2" placeholder="Type your full street address here..." style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 8px; font-family: inherit; margin-bottom: 10px;"></textarea>
+                
+                <label for="deliveryArea" style="font-weight: bold; margin-bottom: 5px; display: block;">Select Delivery Area:</label>
+                <select id="deliveryArea" onchange="updateDeliveryText()" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 8px; font-family: inherit;">
+                    <option value="50">Ladysmith (Local) - R50.00</option>
+                    <option value="150">Bergville - R150.00</option>
+                    <option value="250">Vryheid - R250.00</option>
+                    <option value="300">Dundee - R300.00</option>
+                    <option value="400">Other (Outside Area) - R400.00</option>
+                </select>
+            </div>
+        </div>
+        
         <h3 id="cart-total-price">Total: R0.00</h3>
-        <button class="learn-btn" onclick="closeCart()">Continue Shopping</button>
+        
+        <button class="learn-btn" onclick="placeOrder()" style="background-color: #003366; width: 100%; margin-bottom: 10px;">Place Order</button>
+        <button class="learn-btn" onclick="clearCart()" style="background-color: #cc0000; width: 100%; margin-bottom: 10px;">Clear Cart</button>
+        <button class="learn-btn" onclick="closeCart()" style="width: 100%;">Continue Shopping</button>
     </div>
-</div>
+</div>  
+
 <script src="script.js"></script>
 </body>
 </html>

@@ -1,16 +1,12 @@
 
+// SHOPPING CART 
 let cartItems = [];
 let cartTotalPrice = 0;
 
 function addToCart(itemName, itemPrice) {
-    // Add the item to our list
     cartItems.push({ name: itemName, price: itemPrice });
     cartTotalPrice += itemPrice;
-    
-    // The  number in the header
     document.getElementById("cart-count").textContent = cartItems.length;
-    
-    // Open cart popup modal
     openCart(); 
 }
 
@@ -18,14 +14,15 @@ function openCart() {
     let cartList = document.getElementById("cart-items-list");
     cartList.innerHTML = ""; 
     
-    // Loop
     for (let i = 0; i < cartItems.length; i++) {
         let li = document.createElement("li");
         li.innerHTML = "<span>" + cartItems[i].name + "</span> <span>R" + cartItems[i].price.toFixed(2) + "</span>";
         cartList.appendChild(li);
     }
     
-    document.getElementById("cart-total-price").textContent = "Total: R" + cartTotalPrice.toFixed(2)
+    document.querySelector('input[value="collect"]').checked = true;
+    updateDeliveryText(); 
+
     document.getElementById("cartModal").style.display = "block";
 }
 
@@ -33,11 +30,89 @@ function closeCart() {
     document.getElementById("cartModal").style.display = "none";
 }
 
+function clearCart() {
+    cartItems = [];
+    cartTotalPrice = 0;
+    document.getElementById("cart-count").textContent = "0";
+    document.getElementById("deliveryAddress").value = "";
+    closeCart();
+    alert("Cart cleared successfully!");
+}
 
-// FORM VALIDATION LOGIC
+// DELIVERY LOGIC AND FREE DELIVERY
+function updateDeliveryText() {
+    let deliverySelected = document.querySelector('input[name="deliveryMethod"]:checked').value;
+    let addressBox = document.getElementById("address-container");
+    let priceText = document.getElementById("cart-total-price");
+    
+    if (deliverySelected === "deliver") {
+        addressBox.style.display = "block";
+        
+        let deliveryAreaDropdown = document.getElementById("deliveryArea");
+        let deliveryFee = parseFloat(deliveryAreaDropdown.value);
+        
+        if (cartTotalPrice >= 1000) {
+            priceText.textContent = "Total: R" + cartTotalPrice.toFixed(2) + " (🎉 FREE Delivery!)";
+            priceText.style.color = "green";
+        } else {
+            let newTotal = cartTotalPrice + deliveryFee;
+            priceText.textContent = "Total: R" + newTotal.toFixed(2) + " (incl. R" + deliveryFee.toFixed(2) + " Delivery)";
+            priceText.style.color = "#FF6600"; 
+        }
+        
+    } else {
+        addressBox.style.display = "none";
+        priceText.textContent = "Total: R" + cartTotalPrice.toFixed(2);
+        priceText.style.color = "#FF6600"; 
+    }
+}
+
+// PLACE ORDER LOGIC
+function placeOrder() {
+    if (cartItems.length === 0) {
+        alert("Your cart is empty! Please add some items first.");
+        return;
+    }
+
+    let deliverySelected = document.querySelector('input[name="deliveryMethod"]:checked').value;
+    let addressText = document.getElementById("deliveryAddress").value.trim();
+
+    if (deliverySelected === "deliver" && addressText === "") {
+        alert("Please enter your delivery address before placing the order.");
+        return; 
+    }
+
+    alert("✅ Order Placed Successfully!\n\nThank you for shopping at Gogas Stationery.");
+    clearCart();
+}
+
+// DYNAMIC SEARCH 
+function filterProducts() {
+    let input = document.getElementById('searchInput').value.toLowerCase();
+    let cards = document.getElementsByClassName('product-card');
+
+    for (let i = 0; i < cards.length; i++) {
+        let productName = cards[i].getAttribute('data-name');
+        if (productName.includes(input)) {
+            cards[i].style.display = "block";
+        } else {
+            cards[i].style.display = "none";
+        }
+    }
+}
+
+// GALLERY 
+function openLightbox(imageSrc) {
+    document.getElementById("lightbox-img").src = imageSrc;
+    document.getElementById("lightbox").style.display = "block";
+}
+function closeLightbox() {
+    document.getElementById("lightbox").style.display = "none";
+}
+
+// FORM VALIDATION
 document.addEventListener("DOMContentLoaded", function() {
     
-    // --- ENQUIRY FORM ---
     const enquiryForm = document.getElementById("enquiryForm");
     const errorMessage = document.getElementById("error-message");
 
@@ -62,7 +137,6 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 
-    //  CONTACT FORM 
     const contactForm = document.getElementById("contactForm");
     const contactError = document.getElementById("contact-error");
 
@@ -87,24 +161,3 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 });
-
-// Product Search 
-function filterProducts() {
-    // Get what the user typed
-    let input = document.getElementById('searchInput').value.toLowerCase();
-    
-    // Get all the feature cards
-    let cards = document.getElementsByClassName('feature-card');
-
-    // Loop through all cards
-    for (let i = 0; i < cards.length; i++) {
-        // Get the text inside the card 
-        let cardText = cards[i].innerText.toLowerCase();
-        if (cardText.includes(input)) {
-            cards[i].style.display = "block";
-        } else {
-            cards[i].style.display = "none";
-        }
-    }
-}
-
