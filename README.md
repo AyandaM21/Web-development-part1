@@ -61,6 +61,7 @@ This website is for Gogas Stationery. It is a small shop that sells books, stati
 
   ### Interactive Google Map
   - A search bar was added to the services page this allows users to instantly filter the product catalogue as they type hiding irelevent items.
+  - The cart also includes a dynamic delivery fee based on a selected town.
 
   ### Image Gallery Lightbox
   - A live interactive Google Maps i frame was embedded on the contact page to help customers locate the physical shop in Ladysmith.
